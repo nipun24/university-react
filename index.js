@@ -8,4 +8,4 @@ app.use('/auth', authRouter);
 const modelRouter = require('./model/model.api');
 app.use('/model', modelRouter);
 
-app.listen(8080, () => { console.log("Backend is listening on 8080") });
+app.listen(8000, () => { console.log("Backend is listening on 127.0.0.1:80") });
