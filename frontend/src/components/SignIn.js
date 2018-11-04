@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {Redirect} from 'react-router-dom';
 import { TextField, Button, Grid, Typography, Card, Dialog, DialogActions, DialogTitle, CircularProgress } from '@material-ui/core';
+
 class SignIn extends Component {
   constructor(props) {
     super(props);
@@ -93,7 +94,7 @@ class SignIn extends Component {
                             onChange={this.onPasswordChange}
                             />
                             <Button variant="contained" color="primary" onClick={this.onSignIn} style={{marginTop: '20px'}}>
-                            Sign In
+                              Sign In
                             </Button> 
                         </Grid>
                         </Card>
@@ -107,7 +108,7 @@ class SignIn extends Component {
                     <DialogTitle>{"Invalid Phone Number or Password"}</DialogTitle>
                     <DialogActions>
                         <Button onClick={this.handleAlertClose} color="primary" autoFocus>
-                        Close
+                          Close
                         </Button>
                     </DialogActions>
                     </Dialog>
@@ -116,6 +117,10 @@ class SignIn extends Component {
         case 'home':
             return(
                 <Redirect to='/'/>
+            );
+        default :
+            return(
+              <Redirect to='/signin'/>
             );
     }
   }

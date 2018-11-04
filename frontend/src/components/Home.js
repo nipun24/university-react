@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { AppBar,Toolbar,Typography, Button } from '@material-ui/core';
 import Student from './Student';
+import Professor from './Professor';
+import CollegeAdmin from './CollegeAdmin';
 
 class Home extends Component {
     render(){
@@ -16,7 +18,9 @@ class Home extends Component {
                         </Button>
                     </Toolbar>
                 </AppBar>
-                <Student/>
+                {/* <Student/> */}
+                {/* <Professor/> */}
+                <CollegeAdmin/>
             </div>
         );
     }
